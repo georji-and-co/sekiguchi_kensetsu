@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="関口建設株式会社へのお問い合わせ。注文住宅・リフォーム・店舗建築のご相談は電話またはメールフォームにてお気軽にどうぞ。">
+<title>お問い合わせ | 関口建設株式会社</title>
+<link rel="canonical" href="https://sekiguti.co.jp/contact.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="demo-banner">
+  <span>※</span> これはGeorji &amp; Co.が制作したデモサイトです。実際のサービスへの申し込みはできません。
+</div>
+
+<header class="site-header">
+  <a href="index.html" class="site-logo">
+    <span class="logo-ja">関口建設株式会社</span>
+    <span class="logo-en">SEKIGUTI KENSETU Co., Ltd.</span>
+  </a>
+  <nav aria-label="メインナビゲーション">
+    <ul class="site-nav">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="service.html">事業内容</a></li>
+      <li><a href="works.html">施工実績</a></li>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="contact.html" class="header-cta">お問い合わせ</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="sp-nav">
+  <ul>
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="service.html">事業内容</a></li>
+    <li><a href="works.html">施工実績</a></li>
+    <li><a href="company.html">会社概要</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+  </ul>
+</nav>
+
+<main class="page-body">
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <ol class="breadcrumb">
+        <li><a href="index.html">ホーム</a></li>
+        <li>お問い合わせ</li>
+      </ol>
+      <h1 class="page-hero-title">お問い合わせ</h1>
+      <p class="page-hero-en">Contact</p>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <div class="contact-inner">
+
+      <div class="contact-methods fade-in">
+        <div class="contact-method">
+          <h3>お電話でのご相談</h3>
+          <p class="tel-num"><a href="tel:0276865653">0276-86-5653</a></p>
+          <p>受付時間：平日 9:00〜18:00<br>（土曜は応相談、日祝定休）</p>
+        </div>
+        <div class="contact-method">
+          <h3>メールでのご相談</h3>
+          <p style="font-size:14px; color:var(--rust); font-weight:700; margin-bottom:4px; line-height:1.4;">
+            <a href="mailto:office@sekiguti.co.jp" style="color:var(--rust)">office@sekiguti.co.jp</a>
+          </p>
+          <p>24時間受付。<br>2営業日以内にご返信いたします。</p>
+        </div>
+      </div>
+
+      <h2 class="contact-form-title fade-in">お問い合わせフォーム</h2>
+
+      <form action="https://formspree.io/f/XXXXXXXX" method="POST" class="fade-in">
+        <div class="form-group">
+          <label for="name">
+            お名前 <span class="form-required">必須</span>
+          </label>
+          <input type="text" id="name" name="name" placeholder="山田 太郎" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="kana">
+            フリガナ <span class="form-optional">任意</span>
+          </label>
+          <input type="text" id="kana" name="kana" placeholder="ヤマダ タロウ" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="tel">
+            電話番号 <span class="form-required">必須</span>
+          </label>
+          <input type="tel" id="tel" name="tel" placeholder="0276-XX-XXXX" required autocomplete="tel">
+        </div>
+        <div class="form-group">
+          <label for="email">
+            メールアドレス <span class="form-optional">任意</span>
+          </label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="category">
+            お問い合わせ種別 <span class="form-required">必須</span>
+          </label>
+          <select id="category" name="category" required>
+            <option value="">選択してください</option>
+            <option value="new">新築・注文住宅</option>
+            <option value="reform">増改築・リフォーム</option>
+            <option value="store">店舗・施設建築</option>
+            <option value="maintenance">アフターメンテナンス</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="address">
+            物件の所在地・ご住所 <span class="form-optional">任意</span>
+          </label>
+          <input type="text" id="address" name="address" placeholder="群馬県邑楽郡千代田町〇〇" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="message">
+            お問い合わせ内容 <span class="form-required">必須</span>
+          </label>
+          <textarea id="message" name="message" placeholder="ご要望・ご質問などをできるだけ詳しくお書きください。" required></textarea>
+        </div>
+        <div class="form-group">
+          <label style="flex-direction:row; align-items:center; gap:10px; font-weight:400; cursor:pointer;">
+            <input type="checkbox" required style="width:auto; min-width:0;">
+            <a href="#" style="color:var(--rust); text-decoration:underline;">プライバシーポリシー</a>に同意する
+          </label>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-submit">送信する</button>
+          <p style="font-size:12px; color:var(--gray); margin-top:12px;">
+            ※デモサイトのため実際には送信されません。
+          </p>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-ja">関口建設株式会社</div>
+        <div class="logo-en">SEKIGUTI KENSETU Co., Ltd.</div>
+        <address class="footer-address">
+          〒370-0604<br>群馬県邑楽郡千代田町萓野1235-4<br>
+          TEL: 0276-86-5653 / FAX: 0276-86-5600<br>
+          E-mail: office@sekiguti.co.jp
+        </address>
+      </div>
+      <div class="footer-nav-grid">
+        <div class="footer-nav-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="company.html">会社概要</a></li>
+            <li><a href="company.html#license">許認可・資格</a></li>
+            <li><a href="company.html#access">アクセス</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="service.html">注文住宅・新築</a></li>
+            <li><a href="service.html">増改築・リフォーム</a></li>
+            <li><a href="service.html">店舗・施設建築</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="works.html">施工実績</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 SEKIGUTI KENSETU Corporation. All Rights Reserved.</p>
+      <p class="footer-poweredby">Web Design: Georji &amp; Co.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <div class="sticky-cta-inner">
+    <a href="tel:0276865653" class="sticky-tel">
+      <svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.8 9.09 19.79 19.79 0 01.72 .45 2 2 0 012.7 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.3-1.3a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      電話する
+    </a>
+    <a href="contact.html" class="sticky-mail">
+      <svg viewBox="0 0 24 24" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      メール相談
+    </a>
+  </div>
+</div>
+
+<script src="common.js"></script>
+</body>
+</html>
