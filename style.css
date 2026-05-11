@@ -650,68 +650,132 @@ section { overflow: hidden; }
 
 /* ── Process ──────────────────────────────── */
 .process {
-  padding: 100px 40px;
-  background: var(--white);
+  padding: 100px 0;
+  background: var(--navy-deep);
   overflow: hidden;
 }
-.process-header { max-width: 1100px; margin: 0 auto 64px; }
-.process-steps {
+.process-inner {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 40px;
+}
+.process-header {
+  margin-bottom: 72px;
+}
+.process-header .section-title { color: var(--white); }
+.process-header .section-lead  { color: rgba(255,255,255,0.55); }
+
+/* 5カラムグリッド（PC） */
+.process-steps {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0;
   position: relative;
 }
+
+/* 横線 */
 .process-steps::before {
   content: '';
   position: absolute;
-  top: 40px;
-  left: 10%;
-  right: 10%;
-  height: 2px;
-  background: linear-gradient(to right, var(--rust) 0%, var(--rust-lt) 100%);
+  top: 28px;           /* circle中心 */
+  left: calc(10% + 1px);
+  right: calc(10% + 1px);
+  height: 1px;
+  background: linear-gradient(to right,
+    var(--rust) 0%,
+    rgba(212,120,64,0.4) 100%);
   z-index: 0;
 }
+
 .step-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 12px;
+  padding: 0 10px;
   position: relative;
   z-index: 1;
   min-width: 0;
 }
-.step-circle {
-  width: 80px;
-  height: 80px;
+
+/* ナンバーバッジ */
+.step-badge {
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: var(--navy);
+  border: 1px solid var(--rust);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  border: 4px solid var(--white);
-  box-shadow: 0 0 0 2px var(--rust);
+  margin-bottom: 28px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
-.step-circle span {
+.step-badge span {
   font-family: var(--ff-min);
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 800;
   color: var(--rust-lt);
+  line-height: 1;
 }
+
 .step-name {
   font-family: var(--ff-min);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 10px;
+  color: var(--white);
+  margin-bottom: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
 }
+
 .step-desc {
   font-size: 12px;
-  line-height: 1.9;
-  color: var(--gray);
+  line-height: 2;
+  color: rgba(255,255,255,0.5);
+  word-break: normal;
+}
+
+/* SP: 縦タイムライン */
+@media (max-width: 768px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  /* 縦ライン */
+  .process-steps::before {
+    top: 0; bottom: 0;
+    left: 27px;
+    right: auto;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(to bottom,
+      var(--rust) 0%,
+      rgba(212,120,64,0.2) 100%);
+  }
+
+  .step-item {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 0 0 40px 0;
+  }
+  .step-item:last-child { padding-bottom: 0; }
+
+  .step-badge {
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .step-content { min-width: 0; padding-top: 12px; }
+  .step-name { font-size: 15px; margin-bottom: 8px; }
+  .step-desc { font-size: 13px; }
 }
 
 /* ── CTA Banner ───────────────────────────── */
@@ -1250,11 +1314,6 @@ section { overflow: hidden; }
     grid-template-columns: 1fr;
     gap: 48px;
   }
-  .process-steps {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 32px;
-  }
-  .process-steps::before { display: none; }
 }
 
 @media (max-width: 768px) {
@@ -1299,18 +1358,6 @@ section { overflow: hidden; }
     align-items: flex-start;
     gap: 20px;
   }
-  .process-steps {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .step-item {
-    flex-direction: row;
-    text-align: left;
-    gap: 20px;
-    align-items: flex-start;
-  }
-  .step-circle { flex-shrink: 0; width: 56px; height: 56px; margin-bottom: 0; }
-  .step-circle span { font-size: 18px; }
 
   .footer-top {
     grid-template-columns: 1fr;
@@ -1333,11 +1380,13 @@ section { overflow: hidden; }
   .sticky-cta { display: block; }
 
   .philosophy, .services, .why, .works,
-  .process, .cta-section, .company-section,
+  .cta-section, .company-section,
   .works-page, .contact-section, .access-section {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .process { padding-left: 0; padding-right: 0; }
+  .process-inner { padding-left: 20px; padding-right: 20px; }
   .services-header, .works-header, .process-header {
     padding-left: 0;
     padding-right: 0;
