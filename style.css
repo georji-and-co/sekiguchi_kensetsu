@@ -635,6 +635,38 @@ section { overflow: hidden; }
   text-transform: uppercase;
   color: var(--text-on-dark-muted);
 }
+.material-mini--heritage {
+  grid-template-columns: 1fr;
+}
+.material-mini-item--featured {
+  padding: 28px 22px 26px;
+}
+.material-mini-item--featured::before {
+  width: 3px;
+  opacity: 0.85;
+  background: linear-gradient(to bottom, var(--rust), var(--earth), transparent 85%);
+}
+.material-mini-item--featured .material-mini-num {
+  font-size: clamp(44px, 7vw, 64px);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+.material-mini-item--featured .material-mini-label {
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: rgba(244, 241, 232, 0.85);
+}
+.material-mini-desc {
+  margin: 18px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(244, 241, 232, 0.12);
+  font-family: var(--ff-min);
+  font-size: 13px;
+  line-height: 1.85;
+  letter-spacing: 0.06em;
+  color: var(--text-on-dark-muted);
+}
 
 /* ══════════════════════════════════════════
    SERVICES — 非対称グリッド
@@ -1840,6 +1872,7 @@ section { overflow: hidden; }
 
   .manifesto-inner { grid-template-columns: 1fr; }
   .material-mini { grid-template-columns: 1fr 1fr; }
+  .material-mini--heritage { grid-template-columns: 1fr; }
 
   .access-inner { grid-template-columns: 1fr; gap: 40px; }
   .contact-methods { grid-template-columns: 1fr; }
