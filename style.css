@@ -381,13 +381,13 @@ section { overflow: hidden; }
 .hero-stat:hover::before { height: 60%; }
 .hero-stat-num {
   font-family: var(--ff-gara);
-  font-size: 34px;
+  font-size: 52px;
   font-weight: 400;
   color: var(--graphite);
   line-height: 1;
   letter-spacing: 0.02em;
 }
-.hero-stat-num sup { font-size: 0.45em; letter-spacing: 0.1em; }
+.hero-stat-num sup { font-size: 0.38em; letter-spacing: 0.1em; }
 .hero-stat-label {
   font-size: 10px;
   font-weight: 400;
