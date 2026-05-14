@@ -1,4 +1,4 @@
-/* common.js — 関口建設 株式会社 */
+/* common.js — 株式会社関口建設 */
 
 (function () {
   'use strict';
